@@ -105,7 +105,7 @@ fetch(URL, {
 
 ## 3. 玩家上線統計
 
-- **URL**：`/api/player/stats`  
+- **URL**：`/api/player/status`  
 - **Method**：`GET`  
 - **用途**：查詢目前在線玩家人數與今天曾經上線過的總人數
 
