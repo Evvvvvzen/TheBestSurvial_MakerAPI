@@ -3,7 +3,7 @@
 
 本文件說明如何使用提供的 API 來查詢與操作 Minecraft 商店系統與玩家統計資訊。
 
-## Temporary URL:  https://4cd5-59-125-237-249.ngrok-free.app/
+## Temporary URL: https://4cd5-59-125-237-249.ngrok-free.app/
 ## 🌐 使用 HTML 與 JavaScript 存取 API（跨域與 Ngrok 注意事項）
 
 當從 HTML 頁面（例如透過 `fetch()`）存取部署在 Ngrok 上的 API（如 `https://xxxxx.ngrok-free.app/...`）
