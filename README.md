@@ -31,34 +31,55 @@ fetch(URL, {
 ```json
 [
   {
-    "name": "CHEST",
-    "price": 15,
-    "amount": 64,
-    "boughtAmount": 1982,
-    "boughtMoney": 310,
-    "type": "SELL"
+    "player": "player1",
+    "prices": [118.23, 144.8, 242.0, 228.9, 128.0],
+    "products": {
+      "IRON_INGOT": 1,
+      "GOLD_INGOT": 1,
+      "DIAMOND": 0,
+      "EMERALD": 0,
+      "COAL": 0
+    },
+    "type": "sell"
   },
   {
-    "name": "BONE_MEAL",
-    "price": 5,
-    "amount": 64,
-    "boughtAmount": 0,
-    "boughtMoney": 0,
-    "type": "BUY"
-  }
+    "player": "player2",
+    "prices": [118.23, 144.8, 242.0, 228.9, 128.0],
+    "products": {
+      "IRON_INGOT": 0,
+      "GOLD_INGOT": 1,
+      "DIAMOND": 0,
+      "EMERALD": 0,
+      "COAL": 1
+    },
+    "type": "sell"
+  },
+  {
+    "player": "player1",
+    "prices": [119.25, 150.0, 252.0, 231.9, 143.0],
+    "products": {
+      "IRON_INGOT": 1,
+      "GOLD_INGOT": 0,
+      "DIAMOND": 0,
+      "EMERALD": 1,
+      "COAL": 0
+    },
+    "type": "buy"
+  },
+  ...
 ]
+
 ```
 
 ### 📘 欄位說明
 
-| 欄位名稱       | 型別   | 說明                   |
-|----------------|--------|------------------------|
-| `name`         | string | 商品名稱               |
-| `price`        | int    | 單價                   |
-| `amount`       | int    | 單筆販售數量           |
-| `boughtAmount` | int    | 累計已售出數量         |
-| `boughtMoney`  | int    | 累計已售出金額         |
-| `type`         | string | 商品類型：SELL / BUY  |
+| 欄位名稱 | 型別        | 說明                           |
+|----------|-------------|--------------------------------|
+| `player` | `string`    | 玩家名稱                        |
+| `prices` | `number[]`  | 商品價格陣列（浮點數），依商品順序排列 |
+| `products` | `object`  | 每項商品對應的交易數量（商品名稱為 key） |
+| `type`   | `string`    | 類型：`"sell"` 或 `"buy"`      |
+
 
 ---
 
